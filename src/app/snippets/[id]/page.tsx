@@ -1,4 +1,3 @@
-
 import Link from 'next/link'
 import React from 'react'
 import { db } from '@/db'
@@ -6,7 +5,7 @@ import { notFound } from 'next/navigation'
 import DeleteButton from '@/app/components/deleteButton'
 // import { sleep } from '@/utils/sleep'
 
-interface SnippetShowPageProps { params: { id: string } }
+interface SnippetShowPageProps { params: Promise<{ id: string }> }
 
 export default async function Page({ params }: SnippetShowPageProps) {
     const snippetParams = await params

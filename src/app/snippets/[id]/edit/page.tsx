@@ -3,7 +3,7 @@ import React from 'react'
 import { redirect } from 'next/navigation'
 import CodeEdit from '@/app/components/codeEdit'
 
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
     const snippetParams = await params
     const id = snippetParams.id
     const snippet = await db.snippet.findUnique({

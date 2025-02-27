@@ -15,7 +15,7 @@ export default function Page() {
                 code,
             },
         });
-        // console.log(snippet);
+        console.log(snippet);
         redirect('/')
     }
     return (
