@@ -6,6 +6,7 @@ import { db } from '@/db'
 
 export default async function Page() {
   const snippets = await db.snippet.findMany()
+
   const snippetList = snippets.map(snippet => (
     <Link key={snippet.id}
       href={`/snippets/${snippet.id}`}
